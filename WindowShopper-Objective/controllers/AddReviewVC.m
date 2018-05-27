@@ -64,8 +64,6 @@
     int id = _mItemId;
     NSString *idString = [NSString stringWithFormat:@"%d", id];
     
-    NSLog(@"This is the item ID for the Review %@", idString);
-    
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey: @"uid"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
