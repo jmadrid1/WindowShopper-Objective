@@ -124,7 +124,7 @@
     
     if([self isNetworkAvailable]){
         
-        [[FIRAuth auth] signInWithEmail: email password: password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        [[FIRAuth auth] signInWithEmail: email password: password completion:^(FIRAuthDataResult * _Nullable authResult,                                            NSError * _Nullable error){
             
             if(error){
                 NSLog(@"Failed to log in user.");
@@ -133,7 +133,7 @@
             
             [_mIncorrectCredentialsLabel setHidden: true];
             
-            NSString *userId = user.uid;
+            NSString *userId = authResult.user.uid;
             [[NSUserDefaults standardUserDefaults] setObject: userId forKey: @"uid"];
             
             [self.tabBarController setSelectedIndex: 0];

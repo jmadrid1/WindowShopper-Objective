@@ -1,9 +1,9 @@
 
 #import <UIKit/UIKit.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
-#import <HCSStarRatingView.h>
+#import <HCSStarRatingView/HCSStarRatingView.h>
 
-@interface AddReviewVC : UIViewController
+@interface AddReviewVC : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *mIconImage;
 

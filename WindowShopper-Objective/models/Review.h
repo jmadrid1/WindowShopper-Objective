@@ -3,10 +3,10 @@
 
 @interface Review : NSObject
 
-@property (nonatomic) NSInteger *id;
+@property (nonatomic) int id;
 @property (nonatomic) NSString *uid;
 @property (nonatomic) NSString *comment;
-@property (nonatomic) NSInteger *rating;
+@property (nonatomic) int rating;
 @property (nonatomic) NSString *date;
 
 @end

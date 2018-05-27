@@ -162,19 +162,21 @@
         
         if(password == confirmPassword){
             
-            [[FIRAuth auth] createUserWithEmail: email  password: password  completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+            [[FIRAuth auth] createUserWithEmail: email  password: password  completion:^(FIRAuthDataResult * _Nullable authResult,
+                                                                                         NSError * _Nullable error) {
                 
                 if(error){
                     NSLog(@"%@", error);
                 }else{
                     
-                    [[FIRAuth auth] signInWithEmail: email password: password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+                    [[FIRAuth auth] signInWithEmail: email password: password completion:^(FIRAuthDataResult * _Nullable authResult,
+                                                                                           NSError * _Nullable error) {
                         
                         if(error){
                             NSLog(@"%@", error);
                         }
                         
-                        NSString *userId = user.uid;
+                        NSString *userId = authResult.user.uid;
                         
                         NSDictionary *values = @{@"firstname": firstName,
                                                  @"lastname": lastName,

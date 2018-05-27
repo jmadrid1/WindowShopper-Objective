@@ -33,7 +33,7 @@
 		2EF7A525206170320010BA8D /* ShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7A524206170320010BA8D /* ShoppingCartVC.m */; };
 		2EF7A5282061CBED0010BA8D /* ClothesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7A5272061CBED0010BA8D /* ClothesCell.m */; };
 		2EF7A52E2061CC2B0010BA8D /* CartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7A52D2061CC2B0010BA8D /* CartCell.m */; };
-		6DE93C7993F7C3A93F398CE0 /* libPods-WindowShopper-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DFBB3D29B177521BBED83A /* libPods-WindowShopper-Objective.a */; };
+		85775ACB03CB4BDE7FE7C506 /* Pods_WindowShopper_Objective.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BCAFD9609504178E849B08 /* Pods_WindowShopper_Objective.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +107,7 @@
 		2EF7A52D2061CC2B0010BA8D /* CartCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartCell.m; sourceTree = "<group>"; };
 		3D35A8027C4C35E58BE0FA24 /* Pods-WindowShopper-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindowShopper-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WindowShopper-Objective/Pods-WindowShopper-Objective.debug.xcconfig"; sourceTree = "<group>"; };
 		64302A63FEF0E9A1D302292B /* Pods-WindowShopper-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindowShopper-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-WindowShopper-Objective/Pods-WindowShopper-Objective.release.xcconfig"; sourceTree = "<group>"; };
-		E7DFBB3D29B177521BBED83A /* libPods-WindowShopper-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindowShopper-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BCAFD9609504178E849B08 /* Pods_WindowShopper_Objective.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindowShopper_Objective.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE93C7993F7C3A93F398CE0 /* libPods-WindowShopper-Objective.a in Frameworks */,
+				85775ACB03CB4BDE7FE7C506 /* Pods_WindowShopper_Objective.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +250,7 @@
 			children = (
 				2E8D212B2096B94B004861A8 /* Framework.xcodeproj */,
 				2E8D21292096B921004861A8 /* WindowShopper-Objective */,
-				E7DFBB3D29B177521BBED83A /* libPods-WindowShopper-Objective.a */,
+				78BCAFD9609504178E849B08 /* Pods_WindowShopper_Objective.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -388,9 +388,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WindowShopper-Objective/Pods-WindowShopper-Objective-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCSStarRatingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

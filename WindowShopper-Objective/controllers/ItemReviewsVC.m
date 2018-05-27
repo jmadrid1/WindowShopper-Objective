@@ -19,6 +19,7 @@
    _mReviewsList = [NSMutableArray array];
     
     _mReviewsTable.frame = CGRectMake(0, 64, 414, 630);
+    _mReviewsTable.rowHeight = 70;
     
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey: @"uid"];
     
@@ -28,7 +29,7 @@
         self.navigationItem.rightBarButtonItem = _mAddBarItem;
     }
     
-    NSInteger id = _mSelectedItem.id;
+    int id = _mSelectedItem.id;
     [self getReviewsForItemByDate: id];
 }
 
@@ -62,26 +63,19 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"itemDetailSegue" sender: _mReviewsList[indexPath.row]];
-}
-
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     ReviewCell *cell = (ReviewCell *)[tableView dequeueReusableCellWithIdentifier:@"reviewCell"];
     
     Review *review = _mReviewsList[indexPath.row];
 
-    cell.mDateLabel.font = [UIFont systemFontOfSize: 14];
-    cell.mCommentTextView.font = [UIFont systemFontOfSize: 14];
-    
-    cell.mDateLabel.frame = CGRectMake(297, -1, 85, 21);
-    cell.mCommentTextView.frame = CGRectMake(13, 7, 401, 85);
-    
     cell.mDateLabel.text = review.date;
     cell.mCommentTextView.text = review.comment;
     
-//    cell.mRatingScale.rating = review.rating;
+    int ratingInt = review.rating;
+    NSString *ratingString = [NSString stringWithFormat: @"%.2d", ratingInt];
+    double ratingDouble = [ratingString doubleValue];
+    cell.mRatingScale.value = ratingDouble;
     
     return cell;
 }
@@ -106,14 +100,14 @@
                 
                 int id = [reviewDict[@"id"]intValue];
                 NSString *comment = reviewDict[@"comment"];
-                //            NSInteger *rating = reviewDict[@"rating"];
+                int rating = [reviewDict[@"rating"] intValue];
                 NSString *date = reviewDict[@"specifics"];
                 
                 Review *review = [[Review alloc]init];
                 
                 review.id = id;
                 review.comment = comment;
-                //            review.rating = rating;
+                review.rating = rating;
                 review.date = date;
                 
                 [_mReviewsList addObject: review];

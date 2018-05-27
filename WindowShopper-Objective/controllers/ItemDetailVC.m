@@ -4,6 +4,7 @@
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import "Review.h"
 #import "Reachability.h"
+#import "ItemReviewsVC.h"
 
 @interface ItemDetailVC ()
 
@@ -153,22 +154,22 @@
     
     if([self isNetworkAvailable]){
         
-        [[[[_mRef child: @"inventory"] child:@"3"] child:@"reviews"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        [[[[_mRef child: @"inventory"] child: idString] child:@"reviews"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             
             for(snapshot in snapshot.children){
                 
                 NSDictionary *reviewDict = snapshot.value;
                 
-                NSInteger id = reviewDict[@"id"];
+                int id = [reviewDict[@"id"] intValue];
                 NSString *comment = reviewDict[@"comment"];
-                //            NSInteger *rating = reviewDict[@"rating"];
+                int rating = [reviewDict[@"rating"] intValue];
                 NSString *date = reviewDict[@"specifics"];
                 
                 Review *review = [[Review alloc]init];
                 
                 review.id = id;
                 review.comment = comment;
-                //            review.rating = rating;
+                review.rating = rating;
                 review.date = date;
                 
                 [containerList addObject: review];
@@ -188,6 +189,14 @@
 
 -(void)segueToReviews:(UITapGestureRecognizer *)tap{
     [self performSegueWithIdentifier: @"itemReviewSegue" sender: _mSelectedItem];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"itemReviewSegue"]){
+        ItemReviewsVC *vc = segue.destinationViewController;
+        Clothes *item = sender;
+        vc.mSelectedItem = item;
+    }
 }
 
 -(IBAction)addToCart {

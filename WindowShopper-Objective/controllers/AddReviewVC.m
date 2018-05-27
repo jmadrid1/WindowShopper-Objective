@@ -2,6 +2,7 @@
 #import "AddReviewVC.h"
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import "Reachability.h"
+#import <HCSStarRatingView/HCSStarRatingView.h>
 
 @interface AddReviewVC ()
 
@@ -13,18 +14,30 @@
     [super viewDidLoad];
     
     _mRef = [[FIRDatabase database] reference];
-
+    
     _mIconImage.frame = CGRectMake(137, 167, 140, 128);
-    _mCommentTextField.frame = CGRectMake(83, 310, 276, 102);
-    _mSubmitButton.frame = CGRectMake(157, 469, 101, 30);
+    _mRatingScale.frame = CGRectMake(128.81, 300, 156, 46);
+    _mCommentTextField.frame = CGRectMake(68.22, 365, 276, 102);
+    _mSubmitButton.frame = CGRectMake(155.61, 527, 101, 30);
     
     _mIconImage.image = [UIImage imageNamed: @"ic_add_review.png"];
     
+    _mRatingScale.minimumValue = 1;
+    _mRatingScale.maximumValue = 5;
+    _mRatingScale.value = 3;
+    
+    _mCommentTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+    _mCommentTextField.returnKeyType = UIReturnKeyDone;
     [_mCommentTextField setBorderStyle: UITextBorderStyleRoundedRect];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return TRUE;
 }
 
 -(BOOL)isNetworkAvailable {
@@ -45,12 +58,14 @@
     }
 }
 
-//Add rating scale and its value.
+
 -(IBAction)submitReview{
     
     int id = _mItemId;
     NSString *idString = [NSString stringWithFormat:@"%d", id];
-
+    
+    NSLog(@"This is the item ID for the Review %@", idString);
+    
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey: @"uid"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -59,18 +74,22 @@
     NSString *date = [dateFormatter stringFromDate: [NSDate date]];
     NSString *comment = _mCommentTextField.text;
     
-//    if([self isNetworkAvailable]){
-//
-//            NSDictionary *values = @{@"id": id,
-//                                     @"uid": userId,
-//                                     @"comment": comment,
-//                                     @"rating": rating,
-//                                     @"date": date};
-//
-//            [[[[[_mRef child: @"inventory"] child: @""] child: @"reviews"] childByAutoId] setValue: values];
-//    }else{
-//        [self showNoNetworkConnectionAlert];
-//    }
+    double ratingDouble = _mRatingScale.value;
+    int rating = (int)ratingDouble;
+
+    if([self isNetworkAvailable]){
+
+        NSDictionary *values = @{@"id": idString,
+                                    @"uid": userId,
+                                    @"comment": comment,
+                                    @"rating": @(rating),
+                                    @"date": date};
+
+        [[[[[_mRef child: @"inventory"] child: idString] child: @"reviews"] childByAutoId] setValue: values];
+        [[self navigationController] popViewControllerAnimated: TRUE];
+    }else{
+        [self showNoNetworkConnectionAlert];
+    }
 }
 
 
