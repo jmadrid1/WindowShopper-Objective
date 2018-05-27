@@ -219,22 +219,13 @@
     [cell.mClothesImage sd_setImageWithURL:[NSURL URLWithString: url] placeholderImage: [UIImage imageNamed: @"placeholder.png"]];
         
     cell.mTitleLabel.text = item.title;
+    [cell.mTitleLabel sizeToFit];
+    
+    cell.mTitleLabel.textAlignment = NSTextAlignmentCenter;
     
     double price = item.price;
     cell.mPriceLabel.text = [NSString stringWithFormat: @"%.2f", price];
-    
-    cell.mTitleLabel.font = [UIFont systemFontOfSize: 17];
-    cell.mPriceLabel.font = [UIFont boldSystemFontOfSize: 13];
-    
-    cell.mTitleLabel.textColor = [UIColor whiteColor];
-    cell.mPriceLabel.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [UIColor darkGrayColor];
-    
-    cell.mClothesImage.frame = CGRectMake(20, 0, 250, 260);
-    cell.mTitleLabel.frame = CGRectMake(76, 0, 114, 21);
-    cell.mPriceLabel.frame = CGRectMake(94, 16, 58, 21);
-    cell.mTitleView.frame = CGRectMake(20, 258, 250, 37);
-    
+        
     return cell;
 }
 
