@@ -24,16 +24,15 @@
     _mPantsList = [NSMutableArray array];
     
     _mEmptyView.frame = CGRectMake(0, 59, 414, 628);
-    _mEmptyImage.frame = CGRectMake(167.95, 59, 414, 628);
-    _mClothesCollection.frame = CGRectMake(0, 70, 414, 617);
+    _mEmptyImage.frame = CGRectMake(167.95, 277.34, 76, 64);
+    _mClothesCollection.frame = CGRectMake(0, 70, 414, 621);
     
-    _mEmptyView.backgroundColor = [UIColor darkGrayColor];
+    _mEmptyView.backgroundColor = [UIColor lightGrayColor];
     
     _mEmptyImage.image = [UIImage imageNamed: @"ic_empty_list.png"];
     _mEmptyView.hidden = YES;
     
     [self getInventory];
-//    [self hideTable];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +40,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self hideTable];
+    [self getInventory];
 }
 
 -(BOOL)isNetworkAvailable {
@@ -54,11 +53,11 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Check Network Connection" message:@"Please check internet connection and try again." preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                NSLog(@"This is the delayed method code");
+            if ([self isNetworkAvailable] != NotReachable) {
                 [self getInventory];
-            });
+                _mClothesCollection.hidden = false;
+                _mEmptyView.hidden = true;
+            }
         }];
         
         [alert addAction:okAction];
@@ -67,7 +66,7 @@
 }
 
 -(void)hideTable{
-    int itemCount = _mJacketsList.count + _mShirtsList.count + _mPantsList.count;
+    NSInteger itemCount = _mJacketsList.count + _mShirtsList.count + _mPantsList.count;
     
     if(itemCount == 0){
         [_mClothesCollection setHidden: true];
@@ -124,7 +123,6 @@
                 [_mClothesCollection reloadData];
             }
         }];
-        [self hideTable];
     }else{
         [self hideTable];
         [self showNoNetworkConnectionAlert];
