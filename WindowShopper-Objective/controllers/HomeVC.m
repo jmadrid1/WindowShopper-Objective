@@ -7,39 +7,45 @@
 
 @implementation HomeVC
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _mBannerView.backgroundColor = [UIColor darkGrayColor];
+    _mBannerView.backgroundColor = [UIColor blackColor];
 
     _mBannerLabel.text = @"Great Collections This Spring!";
       
-    _mMensPanelImage.image = [UIImage imageNamed: @"mens_panel.png"];
-    _mWomensPanelImage.image = [UIImage imageNamed: @"womens_panel.png"];
+    _mMensPanelImage.image = [UIImage imageNamed: @"ic_mens_panel.png"];
+    _mWomensPanelImage.image = [UIImage imageNamed: @"ic_womens_panel.png"];
     
-    _mMensPanelImage.frame = CGRectMake(12, 174, 191, 427);
-    _mWomensPanelImage.frame = CGRectMake(211, 174, 190, 427);
+    [_mMensPanelImage setOpaque:false];
+    [_mMensPanelImage setAlpha: 0.5];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(segueToMens:)];
-    [_mMensPanelImage setUserInteractionEnabled: true];
-    [_mMensPanelImage addGestureRecognizer:tap];
+    [_mWomensPanelImage setOpaque:false];
+    [_mWomensPanelImage setAlpha: 0.5];
     
-    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(segueToWomens:)];
-    [_mWomensPanelImage setUserInteractionEnabled: true];
-    [_mWomensPanelImage addGestureRecognizer:tap];
+
+    [_mMensButton setTitle: @"MENS" forState: UIControlStateNormal];
+    [_mMensButton setBackgroundColor: [UIColor colorWithRed: 0 green: 0.9768045545 blue:0 alpha: 1]];
+    _mMensButton.layer.cornerRadius = 15;
+    _mMensButton.layer.borderWidth = 0;
+    
+    [_mWomensButton setTitle: @"WOMENS" forState: UIControlStateNormal];
+    [_mWomensButton setBackgroundColor: [UIColor colorWithRed: 0 green: 0.9768045545 blue:0 alpha: 1]];
+    _mWomensButton.layer.cornerRadius = 15;
+    _mWomensButton.layer.borderWidth = 0;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
--(void)segueToMens:(UITapGestureRecognizer*)tap {
+-(IBAction)mensButtonTap {
     [self performSegueWithIdentifier: @"mensClothingSegue" sender: self];
 }
 
--(void)segueToWomens:(UITapGestureRecognizer*)tap {
+-(IBAction)womensButtonTap {
     [self performSegueWithIdentifier: @"womensClothingSegue" sender: self];
 }
+
 
 @end

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WkV-eu-lWj">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WkV-eu-lWj">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="accountDetailsVC" id="XCg-Rj-Kw1" customClass="AccountDetailsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWw-XR-pSh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-xa-gTz">
@@ -84,7 +84,7 @@
             <objects>
                 <viewController storyboardIdentifier="userLoginVC" id="DGg-iB-Ge3" customClass="UserLoginVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wny-R9-Hgz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqo-FP-XmA">
@@ -177,7 +177,7 @@
             <objects>
                 <viewController storyboardIdentifier="createAccountVC" id="kmW-iP-RCv" customClass="CreateUserAccountVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJV-7F-cIO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeT-S9-85q">
@@ -310,7 +310,7 @@
             <objects>
                 <viewController storyboardIdentifier="updateUserAccountVC" id="inX-V7-Bfm" customClass="UpdateAccountVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ps-QX-YRO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doc-2k-IiS">
@@ -440,31 +440,69 @@
             <objects>
                 <viewController id="UDM-Ni-uc7" customClass="HomeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vW-wF-C3f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9B-ce-Rub">
-                                <rect key="frame" x="12" y="71" width="389" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="6" y="63" width="362" height="104"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great Collections  This Spring!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-Wj-W9v">
-                                        <rect key="frame" x="11" y="11" width="367" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="6" y="16" width="367" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mens_panel" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-a2-tn1">
-                                <rect key="frame" x="12" y="174" width="191" height="427"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="womens_panel" translatesAutoresizingMaskIntoConstraints="NO" id="rli-V8-cCd">
-                                <rect key="frame" x="211" y="174" width="190" height="427"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="694-ui-INS">
+                                <rect key="frame" x="6" y="168" width="362" height="202"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_mens_panel" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-a2-tn1">
+                                        <rect key="frame" x="0.0" y="3" width="362" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVn-gh-pnN">
+                                        <rect key="frame" x="126" y="74" width="110" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" red="0.002964159241" green="0.97708445789999998" blue="0.00015899843130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                        <state key="normal" title="MENS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mensButtonTap" destination="UDM-Ni-uc7" eventType="touchUpInside" id="Mhg-GX-KC6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLP-ei-smb">
+                                <rect key="frame" x="6" y="377" width="362" height="231"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_womens_panel" translatesAutoresizingMaskIntoConstraints="NO" id="rli-V8-cCd">
+                                        <rect key="frame" x="0.0" y="1" width="362" height="231"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-bF-i7z">
+                                        <rect key="frame" x="126" y="88" width="110" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" red="0.002964159241" green="0.97708445789999998" blue="0.00015899843130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="WOMENS">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="womensButtonTap" destination="UDM-Ni-uc7" eventType="touchUpInside" id="3XU-zG-AhS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ife-9z-TdH"/>
@@ -473,7 +511,11 @@
                     <connections>
                         <outlet property="mBannerLabel" destination="J1t-Wj-W9v" id="KJT-wx-bks"/>
                         <outlet property="mBannerView" destination="h9B-ce-Rub" id="SRs-8V-mjd"/>
+                        <outlet property="mMensButton" destination="nVn-gh-pnN" id="anc-N8-5SA"/>
+                        <outlet property="mMensContainer" destination="694-ui-INS" id="fHY-UX-HuR"/>
                         <outlet property="mMensPanelImage" destination="AZS-a2-tn1" id="3ue-ZV-mYc"/>
+                        <outlet property="mWomensButton" destination="enZ-bF-i7z" id="G9D-Wb-fzb"/>
+                        <outlet property="mWomensContainer" destination="kLP-ei-smb" id="ofV-7p-X8v"/>
                         <outlet property="mWomensPanelImage" destination="rli-V8-cCd" id="ZFp-ME-sA0"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="mensClothingSegue" id="0u3-nE-vf0"/>
                         <segue destination="ORk-Ce-9mU" kind="show" identifier="womensClothingSegue" id="hQg-6d-yO2"/>
@@ -481,14 +523,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V71-iv-vHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665.217391304348" y="420.6521739130435"/>
+            <point key="canvasLocation" x="1664.8" y="419.64017991004499"/>
         </scene>
         <!--Womens-->
         <scene sceneID="KjF-NJ-TAt">
             <objects>
                 <viewController id="ORk-Ce-9mU" customClass="WomensClothingVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAR-Xc-BBI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEu-rU-kmc">
@@ -605,7 +647,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MensClothingVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-Pz-6u6">
@@ -722,7 +764,7 @@
             <objects>
                 <viewController id="Yqs-bX-xgU" customClass="ItemDetailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQ1-O2-SSm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shirt 8" translatesAutoresizingMaskIntoConstraints="NO" id="a9N-PE-MK2">
@@ -849,7 +891,7 @@
             <objects>
                 <viewController id="7gv-o9-pJ2" customClass="ItemReviewsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXg-iZ-8QS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DWn-WZ-ZL5">
@@ -861,7 +903,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="izn-Bd-07b" id="7dX-iZ-ODd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5d3-kH-tgt">
@@ -924,7 +966,7 @@
             <objects>
                 <viewController storyboardIdentifier="addReviewVC" id="cZj-et-F4U" customClass="AddReviewVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D8d-gW-2U1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66X-GL-pkY">
@@ -977,7 +1019,7 @@
             <objects>
                 <viewController id="YAR-xz-m18" customClass="ShoppingCartVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXT-Ak-XCa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-Lg-EAY">
@@ -1014,7 +1056,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0YV-AN-waj" id="Mo1-Z8-oWv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$145.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgi-Fe-m0N">
@@ -1116,7 +1158,7 @@
             <objects>
                 <viewController id="7TQ-TE-JQa" customClass="TransactionVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sPa-z6-XRD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-Ck-VqP">
@@ -1298,7 +1340,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="ic_bar_home" id="Uz4-PO-88T"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d0g-pX-aoY">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1317,7 +1359,7 @@
                     <tabBarItem key="tabBarItem" title="Account" image="ic_bar_account" id="iQu-Ga-b2s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cMo-ZM-qjt">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1336,7 +1378,7 @@
                     <tabBarItem key="tabBarItem" title="Cart" image="ic_bar_cart" id="nvD-0Y-rsk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Btb-G4-L4r">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1371,17 +1413,17 @@
     </scenes>
     <resources>
         <image name="dress 2" width="1500" height="2000"/>
-        <image name="ic_account" width="200" height="198"/>
-        <image name="ic_add_review" width="473" height="441"/>
+        <image name="ic_account" width="500" height="500"/>
+        <image name="ic_add_review" width="719" height="655"/>
         <image name="ic_bar_account" width="22" height="22"/>
         <image name="ic_bar_cart" width="22" height="22"/>
-        <image name="ic_bar_home" width="28" height="28"/>
+        <image name="ic_bar_home" width="22" height="22"/>
         <image name="ic_empty_cart" width="77" height="77"/>
         <image name="ic_empty_list" width="62" height="52"/>
+        <image name="ic_mens_panel" width="1572" height="1004"/>
         <image name="ic_windowshopper_transparent" width="500" height="500"/>
-        <image name="mens_panel" width="308" height="636"/>
+        <image name="ic_womens_panel" width="773" height="664"/>
         <image name="shirt 8" width="636" height="636"/>
-        <image name="womens_panel" width="768" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7eQ-Jc-c3c"/>
