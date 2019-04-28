@@ -22,10 +22,6 @@
     _mShirtsList = [NSMutableArray array];
     _mPantsList = [NSMutableArray array];
     
-    _mEmptyView.frame = CGRectMake(0, 59, 414, 628);
-    _mEmptyImage.frame = CGRectMake(167.95, 277.34, 76, 64);
-    _mClothesCollection.frame = CGRectMake(0, 70, 414, 621);
-    
     _mEmptyView.backgroundColor = [UIColor lightGrayColor];
     
     _mEmptyImage.image = [UIImage imageNamed: @"ic_empty_list.png"];
@@ -174,7 +170,6 @@
     switch (indexPath.section) {
         case 0:
             header.mTitle.text = @"Dresses";
-            [header.mTitle sizeToFit];
             break;
         case 1:
             header.mTitle.text = @"Shirts";
@@ -214,7 +209,6 @@
     [cell.mClothesImage sd_setImageWithURL:[NSURL URLWithString: url] placeholderImage: [UIImage imageNamed: @"placeholder.png"]];
     
     cell.mTitleLabel.text = item.title;
-    [cell.mTitleLabel sizeToFit];
     cell.mTitleLabel.textAlignment = NSTextAlignmentCenter;
     
     double price = item.price;
